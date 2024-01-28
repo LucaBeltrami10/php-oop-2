@@ -22,8 +22,6 @@ $cucciaUno = new Cuccia('no', 'false', 1234567, 15, new Categoria('cani'), 'cucc
 
 $prodotti = [$crocchetteUno, $crocchetteDue, $crocchetteTre, $giocoUno, $cucciaUno];
 
-var_dump($CrocchetteUno);
-
 ?>
 
 <!DOCTYPE html>
@@ -34,11 +32,29 @@ var_dump($CrocchetteUno);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>php-oop-2</title>
     <!-- boostrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
 <body>
+
+    <main class="container">
+        <div class="row">
+            <?php foreach ($prodotti as $prodotto) {  ?>
+                <?php var_dump($prodotto) ?>
+                <div class="col-3 mb-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                            <h5 class="card-title"></h5>
+                            <?php foreach ($prodotto as $key => $value) { ?>
+                                <p class="card-text"><?php echo $key ?></p>
+                            <?php } ?>
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
+        </div>
+    </main>
 
 </body>
 

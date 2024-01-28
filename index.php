@@ -7,6 +7,10 @@ ed il tipo di articolo che si sta visualizzando (prodotto, cibo, gioco, cuccia).
 
 <?php
 
+require_once __DIR__ . './Models/Prodotto.php';
+
+$CrocchetteUno = new Cibo()
+
 
 ?>
 

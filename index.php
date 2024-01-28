@@ -22,7 +22,7 @@ $cucciaUno = new Cuccia('no', 'false', 1234567, 15, new Categoria('cani'), 'cucc
 
 $prodotti = [$crocchetteUno, $crocchetteDue, $crocchetteTre, $giocoUno, $cucciaUno];
 
-var_dump($CrocchetteUno)
+var_dump($CrocchetteUno);
 
 ?>
 
@@ -33,6 +33,9 @@ var_dump($CrocchetteUno)
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>php-oop-2</title>
+    <!-- boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
 <body>

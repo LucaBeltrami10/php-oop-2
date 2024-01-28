@@ -14,7 +14,13 @@ require_once __DIR__ . './Models/Cuccia.php';
 require_once __DIR__ . './Models/Gioco.php';
 
 
-$CrocchetteUno = new Cibo('no', 'false', 1234567, 15, new Categoria('cani'), 'Monge Gusto Salmone', '1 anno', 'Salmone', 'tutte le razze');
+$crocchetteUno = new Cibo('no', 'true', 1234567, 15, new Categoria('cani'), 'Monge Gusto Salmone', '1 anno', 'Salmone', 'tutte le razze');
+$crocchetteDue = new Cibo('no', 'true', 1234567, 15, new Categoria('gatti'), 'Monge Gusto Maiale', '3 anno', 'Maiale', 'tutte le razze');
+$crocchetteTre = new Cibo('no', 'true', 1234567, 15, new Categoria('cani'), 'Monge Gusto Tacchino', '6 mesi', 'tacchino', 'Pastore Maremmano');
+$giocoUno = new Gioco('no', 'true', 1234567, 15, new Categoria('cani'), 'Pallina Rossa', 'tutte le età', 'rosso');
+$cucciaUno = new Cuccia('no', 'false', 1234567, 15, new Categoria('cani'), 'cuccia super comoda', 'velluto', 10, 40);
+
+$prodotti = [$crocchetteUno, $crocchetteDue, $crocchetteTre, $giocoUno, $cucciaUno];
 
 var_dump($CrocchetteUno)
 

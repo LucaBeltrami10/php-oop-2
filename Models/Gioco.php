@@ -8,9 +8,9 @@ class Gioco extends Prodotto
     protected $lifeStage;
     protected $colore;
 
-    public function __construct($_disponibilità, $_codiceProdotto, $_stock, $_categoria, $_nome, $_lifeStage, $_colore)
+    public function __construct($_imgProdotto, $_disponibilità, $_codiceProdotto, $_stock, $_categoria, $_nome, $_lifeStage, $_colore)
     {
-        parent::__construct($_disponibilità, $_codiceProdotto, $_stock, $_categoria);
+        parent::__construct($_imgProdotto, $_disponibilità, $_codiceProdotto, $_stock, $_categoria);
 
         $this->nome = $this->setNome($_nome);
         $this->lifeStage = $this->setLifeStage($_lifeStage);

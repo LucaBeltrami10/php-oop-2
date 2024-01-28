@@ -9,9 +9,9 @@ class Cuccia extends Prodotto
     protected $larghezza;
     protected $altezza;
 
-    public function __construct($_disponibilità, $_codiceProdotto, $_stock, $_categoria, $_nome, $_tessuto, $_altezza, $_largezza)
+    public function __construct($_imgProdotto, $_disponibilità, $_codiceProdotto, $_stock, $_categoria, $_nome, $_tessuto, $_altezza, $_largezza)
     {
-        parent::__construct($_disponibilità, $_codiceProdotto, $_stock, $_categoria);
+        parent::__construct($_imgProdotto, $_disponibilità, $_codiceProdotto, $_stock, $_categoria);
 
         $this->nome = $this->setNome($_nome);
         $this->tessuto = $this->setTessuto($_tessuto);

@@ -21,9 +21,9 @@ class Cibo extends Prodotto
      * @param [type] $_gusto / gusto del prodotto
      * @param [type] $_razza / destinato a razza
      */
-    public function __construct($_disponibilità, $_codiceProdotto, $_stock, $_categoria, $_nome, $_lifeStage, $_gusto, $_razza)
+    public function __construct($_imgProdotto, $_disponibilità, $_codiceProdotto, $_stock, $_categoria, $_nome, $_lifeStage, $_gusto, $_razza)
     {
-        parent::__construct($_disponibilità, $_codiceProdotto, $_stock, $_categoria);
+        parent::__construct($_imgProdotto, $_disponibilità, $_codiceProdotto, $_stock, $_categoria);
 
         $this->nome = $this->setNome($_nome);
         $this->lifeStage = $this->setLifeStage($_lifeStage);

@@ -2,14 +2,16 @@
 
 class Prodotto
 {
+    protected $imgProdotto;
     protected $disponibilità;
     protected $codiceProdotto;
     protected $stock;
 
     protected $categoria;
 
-    public function __construct($_disponibilità, $_codiceProdotto, $_stock, $_categoria)
+    public function __construct($_imgProdotto, $_disponibilità, $_codiceProdotto, $_stock, $_categoria)
     {
+        $this->imgProdotto = $_imgProdotto;
         $this->disponibilità = $this->setDisponibilità($_disponibilità);
         $this->codiceProdotto = $this->setCodiceProdotto($_codiceProdotto);
         $this->stock = $this->setStock($_stock);

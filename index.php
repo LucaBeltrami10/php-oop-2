@@ -8,9 +8,13 @@ ed il tipo di articolo che si sta visualizzando (prodotto, cibo, gioco, cuccia).
 <?php
 
 require_once __DIR__ . './Models/Prodotto.php';
+require_once __DIR__ . './Models/Categoria.php';
+require_once __DIR__ . './Models/Cibo.php';
 
-$CrocchetteUno = new Cibo()
+$prodottoprova = new Prodotto('marione', 1234567, '12', new Categoria('cani'));
+$CrocchetteUno = new Cibo('false', 1234567, 15, new Categoria('cani'), 'Monge Gusto Salmone', '1 anno', 'Salmone', 'tutte le razze');
 
+var_dump($CrocchetteUno)
 
 ?>
 

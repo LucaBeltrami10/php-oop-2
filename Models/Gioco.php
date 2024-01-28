@@ -12,9 +12,9 @@ class Gioco extends Prodotto
     {
         parent::__construct($_disponibilità, $_codiceProdotto, $_stock, $_categoria);
 
-        $this->setNome($_nome);
-        $this->setLifeStage($_lifeStage);
-        $this->setColore($_colore);
+        $this->nome = $this->setNome($_nome);
+        $this->lifeStage = $this->setLifeStage($_lifeStage);
+        $this->colore = $this->setColore($_colore);
     }
 
     protected function getsetNome()

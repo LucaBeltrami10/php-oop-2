@@ -10,9 +10,9 @@ class Prodotto
 
     public function __construct($_disponibilità, $_codiceProdotto, $_stock, $_categoria)
     {
-        $this->setDisponibilità($_disponibilità);
-        $this->setCodiceProdotto($_codiceProdotto);
-        $this->setStock($_stock);
+        $this->disponibilità = $this->setDisponibilità($_disponibilità);
+        $this->codiceProdotto = $this->setCodiceProdotto($_codiceProdotto);
+        $this->stock = $this->setStock($_stock);
         $this->categoria = $_categoria;
     }
 
@@ -20,9 +20,9 @@ class Prodotto
     {
         return $this->disponibilità;
     }
-    protected  function setDisponibilità($__disponibilità)
+    protected  function setDisponibilità($_disponibilità)
     {
-        return ucfirst(strtolower($__disponibilità));
+        return ucfirst(strtolower($_disponibilità));
     }
 
     protected function getCodiceProdotto()
@@ -31,7 +31,7 @@ class Prodotto
     }
     protected  function setCodiceProdotto($__CodiceProdotto)
     {
-        return ucfirst(strtolower($__CodiceProdotto));
+        return $__CodiceProdotto;
     }
 
     protected function getStock()
@@ -40,6 +40,6 @@ class Prodotto
     }
     protected  function setStock($__Stock)
     {
-        return ucfirst(strtolower($__Stock));
+        return $__Stock;
     }
 }

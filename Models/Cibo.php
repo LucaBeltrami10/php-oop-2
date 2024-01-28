@@ -25,10 +25,10 @@ class Cibo extends Prodotto
     {
         parent::__construct($_disponibilità, $_codiceProdotto, $_stock, $_categoria);
 
-        $this->setNome($_nome);
-        $this->setLifeStage($_lifeStage);
-        $this->setGusto($_gusto);
-        $this->setRazza($_razza);
+        $this->nome = $this->setNome($_nome);
+        $this->lifeStage = $this->setLifeStage($_lifeStage);
+        $this->gusto = $this->setGusto($_gusto);
+        $this->razza = $this->setRazza($_razza);
     }
 
     protected function getsetNome()

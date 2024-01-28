@@ -13,10 +13,10 @@ class Cuccia extends Prodotto
     {
         parent::__construct($_disponibilità, $_codiceProdotto, $_stock, $_categoria);
 
-        $this->setNome($_nome);
-        $this->setTessuto($_tessuto);
-        $this->setLarghezza($_largezza);
-        $this->setAltezza($_altezza);
+        $this->nome = $this->setNome($_nome);
+        $this->tessuto = $this->setTessuto($_tessuto);
+        $this->larghezza = $this->setLarghezza($_largezza);
+        $this->altezza = $this->setAltezza($_altezza);
     }
 
     protected function getsetNome()
@@ -43,7 +43,7 @@ class Cuccia extends Prodotto
     }
     protected  function setLarghezza($__larghezza)
     {
-        return ucfirst(strtolower($__larghezza));
+        return $__larghezza;
     }
 
     protected function getAltezza()
@@ -52,6 +52,6 @@ class Cuccia extends Prodotto
     }
     protected  function setAltezza($__altezza)
     {
-        return ucfirst(strtolower($__altezza));
+        return $__altezza;
     }
 }

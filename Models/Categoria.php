@@ -11,7 +11,7 @@ class Categoria
      */
     public function __construct($_categoria)
     {
-        $this->setCategoria($_categoria);
+        $this->categoria = $this->setCategoria($_categoria);
     }
 
     protected function getCategoria()
@@ -20,15 +20,12 @@ class Categoria
     }
     protected  function setCategoria($__Categoria)
     {
-        return ucfirst(strtolower($__Categoria));
-    }
-
-    protected function setDescrizione()
-    {
-        if ($this->categoria == 'Cane') {
+        if ($__Categoria == 'cani') {
             $this->descrizione = 'Oggetto per cani';
         } else {
             $this->descrizione = 'Oggetto per gatti';
         }
+
+        return ucfirst(strtolower($__Categoria));
     }
 }

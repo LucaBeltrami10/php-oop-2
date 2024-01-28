@@ -12,8 +12,35 @@ class Gioco extends Prodotto
     {
         parent::__construct($_disponibilità, $_codiceProdotto, $_stock, $_categoria);
 
-        $this->setDisponibilità($_nome);
-        $this->setCodiceProdotto($_lifeStage);
-        $this->setStock($_colore);
+        $this->setNome($_nome);
+        $this->setLifeStage($_lifeStage);
+        $this->setColore($_colore);
+    }
+
+    protected function getsetNome()
+    {
+        return $this->nome;
+    }
+    protected  function setNome($__nome)
+    {
+        return ucfirst(strtolower($__nome));
+    }
+
+    protected function getLifeStage()
+    {
+        return $this->lifeStage;
+    }
+    protected  function setLifeStage($__lifeStage)
+    {
+        return ucfirst(strtolower($__lifeStage));
+    }
+
+    protected function getColore()
+    {
+        return $this->colore;
+    }
+    protected  function setColore($__colore)
+    {
+        return ucfirst(strtolower($__colore));
     }
 }

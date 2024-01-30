@@ -4,10 +4,10 @@ require_once __DIR__ . '/Prodotto.php';
 class Cibo extends Prodotto
 {
 
-    protected $nome;
-    protected $lifeStage;
-    protected $gusto;
-    protected $razza;
+    public $nome;
+    public $lifeStage;
+    public $gusto;
+    public $razza;
 
     /**
      * Undocumented function
@@ -31,38 +31,38 @@ class Cibo extends Prodotto
         $this->razza = $this->setRazza($_razza);
     }
 
-    protected function getsetNome()
+    public function getsetNome()
     {
         return $this->nome;
     }
-    protected  function setNome($__nome)
+    public  function setNome($__nome)
     {
         return ucfirst(strtolower($__nome));
     }
 
-    protected function getLifeStage()
+    public function getLifeStage()
     {
         return $this->lifeStage;
     }
-    protected  function setLifeStage($__lifeStage)
+    public  function setLifeStage($__lifeStage)
     {
         return ucfirst(strtolower($__lifeStage));
     }
 
-    protected function getGusto()
+    public function getGusto()
     {
         return $this->gusto;
     }
-    protected  function setGusto($__gusto)
+    public  function setGusto($__gusto)
     {
         return ucfirst(strtolower($__gusto));
     }
 
-    protected function getRazza()
+    public function getRazza()
     {
         return $this->razza;
     }
-    protected  function setRazza($__razza)
+    public  function setRazza($__razza)
     {
         return ucfirst(strtolower($__razza));
     }

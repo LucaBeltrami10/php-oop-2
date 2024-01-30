@@ -2,8 +2,8 @@
 
 class Categoria
 {
-    protected $categoria;
-    protected $descrizione;
+    public $categoria;
+    public $descrizione;
     /**
      * Undocumented function
      *
@@ -14,11 +14,11 @@ class Categoria
         $this->categoria = $this->setCategoria($_categoria);
     }
 
-    protected function getCategoria()
+    public function getCategoria()
     {
         return $this->categoria;
     }
-    protected  function setCategoria($__Categoria)
+    public  function setCategoria($__Categoria)
     {
         if ($__Categoria == 'cani') {
             $this->descrizione = 'Oggetto per cani';

@@ -4,10 +4,10 @@ require_once __DIR__ . '/Prodotto.php';
 class Cuccia extends Prodotto
 {
 
-    protected $nome;
-    protected $tessuto;
-    protected $larghezza;
-    protected $altezza;
+    public $nome;
+    public $tessuto;
+    public $larghezza;
+    public $altezza;
 
     public function __construct($_imgProdotto, $_disponibilità, $_codiceProdotto, $_stock, $_categoria, $_nome, $_tessuto, $_altezza, $_largezza)
     {
@@ -19,38 +19,38 @@ class Cuccia extends Prodotto
         $this->altezza = $this->setAltezza($_altezza);
     }
 
-    protected function getsetNome()
+    public function getsetNome()
     {
         return $this->nome;
     }
-    protected  function setNome($__nome)
+    public  function setNome($__nome)
     {
         return ucfirst(strtolower($__nome));
     }
 
-    protected function getTessuto()
+    public function getTessuto()
     {
         return $this->tessuto;
     }
-    protected  function setTessuto($__tessuto)
+    public  function setTessuto($__tessuto)
     {
         return ucfirst(strtolower($__tessuto));
     }
 
-    protected function getLarghezza()
+    public function getLarghezza()
     {
         return $this->larghezza;
     }
-    protected  function setLarghezza($__larghezza)
+    public  function setLarghezza($__larghezza)
     {
         return $__larghezza;
     }
 
-    protected function getAltezza()
+    public function getAltezza()
     {
         return $this->altezza;
     }
-    protected  function setAltezza($__altezza)
+    public  function setAltezza($__altezza)
     {
         return $__altezza;
     }

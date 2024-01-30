@@ -2,14 +2,14 @@
 
 class Prodotto
 {
-    protected $imgProdotto;
-    protected $disponibilità;
-    protected $codiceProdotto;
-    protected $stock;
+    public $imgProdotto;
+    public $disponibilità;
+    public $codiceProdotto;
+    public $stock;
 
-    protected $categoria;
+    public $categoria;
 
-    public function __construct($_imgProdotto, $_disponibilità, $_codiceProdotto, $_stock, $_categoria)
+    public function __construct(string $_imgProdotto, bool $_disponibilità, int $_codiceProdotto, int $_stock, $_categoria)
     {
         $this->imgProdotto = $_imgProdotto;
         $this->disponibilità = $this->setDisponibilità($_disponibilità);
@@ -18,29 +18,29 @@ class Prodotto
         $this->categoria = $_categoria;
     }
 
-    protected function getDisponibilità()
+    public function getDisponibilità()
     {
         return $this->disponibilità;
     }
-    protected  function setDisponibilità($_disponibilità)
+    public  function setDisponibilità($_disponibilità)
     {
         return ucfirst(strtolower($_disponibilità));
     }
 
-    protected function getCodiceProdotto()
+    public function getCodiceProdotto()
     {
         return $this->disponibilità;
     }
-    protected  function setCodiceProdotto($__CodiceProdotto)
+    public  function setCodiceProdotto($__CodiceProdotto)
     {
         return $__CodiceProdotto;
     }
 
-    protected function getStock()
+    public function getStock()
     {
         return $this->stock;
     }
-    protected  function setStock($__Stock)
+    public  function setStock($__Stock)
     {
         return $__Stock;
     }

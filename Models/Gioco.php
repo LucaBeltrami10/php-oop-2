@@ -4,9 +4,9 @@ require_once __DIR__ . '/Prodotto.php';
 class Gioco extends Prodotto
 {
 
-    protected $nome;
-    protected $lifeStage;
-    protected $colore;
+    public $nome;
+    public $lifeStage;
+    public $colore;
 
     public function __construct($_imgProdotto, $_disponibilità, $_codiceProdotto, $_stock, $_categoria, $_nome, $_lifeStage, $_colore)
     {
@@ -17,29 +17,29 @@ class Gioco extends Prodotto
         $this->colore = $this->setColore($_colore);
     }
 
-    protected function getsetNome()
+    public function getsetNome()
     {
         return $this->nome;
     }
-    protected  function setNome($__nome)
+    public  function setNome($__nome)
     {
         return ucfirst(strtolower($__nome));
     }
 
-    protected function getLifeStage()
+    public function getLifeStage()
     {
         return $this->lifeStage;
     }
-    protected  function setLifeStage($__lifeStage)
+    public  function setLifeStage($__lifeStage)
     {
         return ucfirst(strtolower($__lifeStage));
     }
 
-    protected function getColore()
+    public function getColore()
     {
         return $this->colore;
     }
-    protected  function setColore($__colore)
+    public  function setColore($__colore)
     {
         return ucfirst(strtolower($__colore));
     }

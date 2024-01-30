@@ -32,8 +32,7 @@ $prodotti = [$crocchetteUno, $crocchetteDue, $crocchetteTre, $giocoUno, $cucciaU
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>php-oop-2</title>
     <!-- boostrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
 <body>
@@ -42,16 +41,21 @@ $prodotti = [$crocchetteUno, $crocchetteDue, $crocchetteTre, $giocoUno, $cucciaU
         <div class="row">
             <?php foreach ($prodotti as $prodotto) {  ?>
 
-            <div class="col-3 mb-3">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body text-center">
-                        <?php foreach ($prodotto as $key => $value) { ?>
-                        <p class="card-text"><?php echo $value ?></p>
-                        <?php } ?>
+                <div class="col-3 mb-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                            <?php foreach ($prodotto as $key => $value) { ?>
+                                <?php var_dump($Prodotto) ?>
+                                <?php if (is_a($valore, 'Category')) { ?>
+                                    <p class="card-text"><?php echo $value->nome ?></p>
+                                <?php } else { ?>
+                                    <p class="card-text"><?php echo $key ?><?php echo $value ?></p>
+                                <?php } ?>
+                            <?php } ?>
+                        </div>
                     </div>
                 </div>
-            </div>
             <?php } ?>
         </div>
     </main>
